@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left:1.25em;
+  padding-right:1.25em;
+}
+.head {
+  display:flex;
+  align-items: flex-end;
+  padding-bottom: 0.5em;
+  font-family: 'Bungee', cursive;
+  font-size: 36px
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.fa-angles-down{
+color: red
+}
