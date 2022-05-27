@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  padding-top: 125px;
+  height: 400px;
+  width:100%;
+  background-color: #f57f00;
+  background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+}
+
+#overlay {
+  position: fixed;
+  z-index: 2;
+}
+
+.avatar {
+  height: 30%;
+  width: 10%
+}
