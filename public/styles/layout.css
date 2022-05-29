@@ -28,4 +28,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+main {
+  margin:auto;
+  width: 90%;
+  background-color: #f4f1ec;
+  background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+}
 
