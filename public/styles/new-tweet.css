@@ -37,6 +37,56 @@ form {
 }
 
 
-
-
-
+.tweetheader {
+  margin:auto;
+  background-color: #f4f1ec;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width:90%;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+.tweetheader:hover{
+  box-shadow: 5px 10px;
+}
+.top-element{
+  display: flex;
+  align-items: center;
+}
+.top{
+  background-color: #f4f1ec;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.lower{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin:auto;
+  padding-bottom: 0.5em;
+}
+.fa-flag:hover{
+  color:gold;
+}
+.fa-retweet:hover{
+  color:blue;
+}
+.fa-heart:hover {
+  color:red;
+}
+/* i:hover {
+  color: red;
+} */
+.contents {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 5px solid black;
+  padding-bottom: 0.5em;
+  width: 95%;
+  margin: auto;
+}
