@@ -11,10 +11,6 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
 }
 
-#overlay {
-  position: fixed;
-  z-index: 2;
-}
 
 .avatar {
   height: 30%;
