@@ -47,6 +47,7 @@ form {
   width:90%;
   border: 2px solid black;
   box-sizing: border-box;
+  margin-bottom: 1em;
 }
 .tweetheader:hover{
   box-shadow: 5px 10px;
@@ -79,9 +80,6 @@ form {
 .fa-heart:hover {
   color:red;
 }
-/* i:hover {
-  color: red;
-} */
 .contents {
   display: flex;
   justify-content: flex-start;
@@ -90,3 +88,4 @@ form {
   width: 95%;
   margin: auto;
 }
+
