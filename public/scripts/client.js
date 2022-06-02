@@ -26,7 +26,7 @@ const createTweetElement = function(obj) {
       </span>
       <footer>
         <span class="lower">
-          ${obj.created_at}
+          ${timeago.format(obj.created_at)}
           <div>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
