@@ -58,34 +58,18 @@
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
+          <script>
+          $("form").submit(function(){
+            event.preventDefault()
+            $.post("/", $("form").serialize(),(error) => {
+              console.log(error)
+            })
+          })
+          </script>
         </form>
       </section>
     </main>
     <br>
-    <!-- <article class="tweetheader">
-      <div class="top">
-        <span class="top-element">
-          <img class="avatar" src="/images/profile-hex.png"> 
-          Isaac Newton
-        </span>
-        <span>
-          @newton
-        </span>
-      </div>
-      <span class="contents">
-        If I have seen further it is by standing on the shoulders of giants.
-      </span>
-      <footer>
-        <span class="lower">
-          10 Days Ago
-          <div>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-            </div>
-        </span>
-      </footer>
-    </article> -->
     <div class="tweets">
     </div>
   </body>
