@@ -74,6 +74,9 @@ const onSubmit = function(event) {
   } else {
     $.post("/tweets", data)
       .then(data => {
+        loadTweets()
+        $(".submission").trigger("reset");
+        $(".counter").val(140);
       });
     }
   };
