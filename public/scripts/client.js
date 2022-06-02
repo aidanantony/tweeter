@@ -3,11 +3,18 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function() {
+$(function() {
   $("form").on("submit", onSubmit);
-  loadTweets();
+  loadTweets()
 });
 
+const escaped =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+//The function and the HTML within it that are the framework of the dynamic tweets.
 const createTweetElement = function(obj) {
   let $tweet = $("<article>").addClass("tweet");
   let html = `
@@ -22,7 +29,7 @@ const createTweetElement = function(obj) {
         </span>
       </div>
       <span class="contents">
-        ${obj.content.text}
+        ${escaped(obj.content.text)}
       </span>
       <footer>
         <span class="lower">
@@ -36,8 +43,7 @@ const createTweetElement = function(obj) {
       </footer>
     </article>
     `;
-  let tweetElement = $tweet.append(html);
-  return tweetElement;
+  return html;
 };
 
 const renderTweets = function(tweetData) {
@@ -48,6 +54,7 @@ const renderTweets = function(tweetData) {
   }
 };
 
+//GET request for page
 const loadTweets = function() {
   $.get("/tweets")
     .then(data => {
@@ -55,11 +62,22 @@ const loadTweets = function() {
     });
 };
 
+//onSubmit function moved to its own place. Inclues validation check of tweet length and content
 const onSubmit = function(event) {
   event.preventDefault();
   const data = $(this).serialize();
-  console.log(data);
-  $.post("/tweets", data)
-    .then(data => {
-    });
-};
+  let input = $("#tweet-text").val();
+  if (input === "") {
+    alert("Tweet field can not be empty!");
+  } else if (input.length > 140) {
+    alert("Tweet is too long!");
+  } else {
+    $.post("/tweets", data)
+      .then(data => {
+      });
+    }
+  };
+
+
+
+  
