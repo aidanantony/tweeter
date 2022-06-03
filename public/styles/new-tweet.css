@@ -89,3 +89,18 @@ form {
   margin: auto;
 }
 
+
+.message {
+  display: flex;
+  justify-content: center;
+  color:red;
+  font-size:30px;
+  border: 2px solid red;
+  width:111%;
+}
+
+.errors{
+  width: 90%;
+  background-color: #f4f1ec;
+}
+

@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(function() {
+  const errorMessage = $(".message")
+  errorMessage.hide()
   $("form").on("submit", onSubmit);
   loadTweets()
 });
@@ -62,15 +64,23 @@ const loadTweets = function() {
     });
 };
 
+const errorDisplay = function(error) {
+  const errorMessage = $(".message")
+  errorMessage.slideDown().text(error)
+}
 //onSubmit function moved to its own place. Inclues validation check of tweet length and content
 const onSubmit = function(event) {
   event.preventDefault();
+  const errorMessage = $(".message")
+  errorMessage.hide()
   const data = $(this).serialize();
   let input = $("#tweet-text").val();
   if (input === "") {
-    alert("Tweet field can not be empty!");
+    errorDisplay("Error! Tweet input can not be empty! Please try again with content in your tweet!")
+    // $(".min-error").slideDown()
   } else if (input.length > 140) {
-    alert("Tweet is too long!");
+    errorDisplay("Error! Please submit a tweet under 140 characters!")
+    // $(".length-error").slideDown()
   } else {
     $.post("/tweets", data)
       .then(data => {
