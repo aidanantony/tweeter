@@ -26,4 +26,6 @@ For this project I used HTML, CSS, Javascript, Jquery and AJAX for my front end 
 ## Dependencies
 
 - Express
+- Body-Parser
+- Chance
 - Node 5.10.x or above
