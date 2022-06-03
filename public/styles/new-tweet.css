@@ -97,6 +97,7 @@ form {
   font-size:30px;
   border: 2px solid red;
   width:111%;
+  margin-top: 0.2em;
 }
 
 .errors{
@@ -104,3 +105,35 @@ form {
   background-color: #f4f1ec;
 }
 
+@media (min-width: 1024px) {
+  .new-tweet {
+    width:90%;
+    display: flex;
+    justify-content: flex-end;
+    margin:auto;
+    float: right;
+    padding-bottom: 1em;
+  }
+  .tweetheader {
+    width:70;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+  .tweets{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width:50%;
+    margin:auto;
+    float: right;
+    right:0;
+    z-index:1;
+  }
+  .textarea{
+    display: flex;
+    align-items:flex-start;
+  }
+
+}

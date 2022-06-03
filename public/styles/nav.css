@@ -28,3 +28,10 @@ nav {
 color: red
 }
 
+@media (max-width:768px) {
+  nav {
+    background-color: #f57f00;
+    background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
+  }
+}
+

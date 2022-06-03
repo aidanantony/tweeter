@@ -4,17 +4,17 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(function() {
-  const errorMessage = $(".message")
-  errorMessage.hide()
+  const errorMessage = $(".message");
+  errorMessage.hide();
   $("form").on("submit", onSubmit);
-  loadTweets()
+  loadTweets();
 });
 
-const escaped =  function(str) {
+const escaped = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 //The function and the HTML within it that are the framework of the dynamic tweets.
 const createTweetElement = function(obj) {
@@ -65,32 +65,31 @@ const loadTweets = function() {
 };
 
 const errorDisplay = function(error) {
-  const errorMessage = $(".message")
-  errorMessage.slideDown().text(error)
-}
+  const errorMessage = $(".message");
+  errorMessage.slideDown().text(error);
+};
 //onSubmit function moved to its own place. Inclues validation check of tweet length and content
 const onSubmit = function(event) {
   event.preventDefault();
-  const errorMessage = $(".message")
-  errorMessage.hide()
+  const errorMessage = $(".message");
+  errorMessage.hide();
   const data = $(this).serialize();
   let input = $("#tweet-text").val();
   if (input === "") {
-    errorDisplay("Error! Tweet input can not be empty! Please try again with content in your tweet!")
+    errorDisplay("Error! Tweet input can not be empty! Please try again with content in your tweet!");
     // $(".min-error").slideDown()
   } else if (input.length > 140) {
-    errorDisplay("Error! Please submit a tweet under 140 characters!")
+    errorDisplay("Error! Please submit a tweet under 140 characters!");
     // $(".length-error").slideDown()
   } else {
     $.post("/tweets", data)
       .then(data => {
-        loadTweets()
+        loadTweets();
         $(".submission").trigger("reset");
         $(".counter").val(140);
       });
-    }
-  };
+  }
+};
 
 
 
-  
