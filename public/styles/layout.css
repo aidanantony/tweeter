@@ -35,4 +35,12 @@ main {
   background-image: url("https://www.transparenttextures.com/patterns/blizzard.png");
 }
 
+/* Following styling is for when the page goes above 768px */
+@media (min-width: 768px) {
+  main{
+  margin-top: 10em;
+  width: 63%;
+  float: right;
+  }
+}
 
