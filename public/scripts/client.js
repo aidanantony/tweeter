@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+// Document.ready is deprecated so the syntax below was used to keep up with newest update
 $(function() {
   const errorMessage = $(".message");
   errorMessage.hide();
@@ -63,7 +65,7 @@ const loadTweets = function() {
       renderTweets(data);
     });
 };
-
+//Modularized errorDisplay function to save a little memory and space
 const errorDisplay = function(error) {
   const errorMessage = $(".message");
   errorMessage.slideDown().text(error);
@@ -77,10 +79,8 @@ const onSubmit = function(event) {
   let input = $("#tweet-text").val();
   if (input === "") {
     errorDisplay("Error! Tweet input can not be empty! Please try again with content in your tweet!");
-    // $(".min-error").slideDown()
   } else if (input.length > 140) {
     errorDisplay("Error! Please submit a tweet under 140 characters!");
-    // $(".length-error").slideDown()
   } else {
     $.post("/tweets", data)
       .then(data => {

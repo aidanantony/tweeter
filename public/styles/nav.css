@@ -1,3 +1,4 @@
+/* nav bar CSS styling that fixes it to the top of page */
 nav {
   display: flex;
   justify-content: space-between;
@@ -27,7 +28,7 @@ nav {
 .fa-angles-down{
 color: red
 }
-
+ /* When page goes under 768px, this is the new color of the nav */
 @media (max-width:768px) {
   nav {
     background-color: #f57f00;
