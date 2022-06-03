@@ -1,7 +1,4 @@
 .new-tweet {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   width:100%;
 }
 textarea {
@@ -11,6 +8,8 @@ textarea {
   white-space: nowrap;
   border-bottom: 5px solid black;
   height: 45px;
+  width: 100%;
+  margin: 5px 0;
 }
 
 button {
@@ -25,10 +24,8 @@ button {
 }
 
 form {
-  flex-direction: column;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
 .bottom {
@@ -105,13 +102,17 @@ form {
   background-color: #f4f1ec;
 }
 
-@media (min-width: 1024px) {
+.submission {
+  display: block;
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
   .new-tweet {
-    width:90%;
-    display: flex;
+    width:71.3%;
     justify-content: flex-end;
-    margin:auto;
-    float: right;
+    margin:5px auto;
+    margin-right:1.9em;
     padding-bottom: 1em;
   }
   .tweetheader {
@@ -130,10 +131,6 @@ form {
     float: right;
     right:0;
     z-index:1;
-  }
-  .textarea{
-    display: flex;
-    align-items:flex-start;
   }
 
 }
