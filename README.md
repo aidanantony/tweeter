@@ -7,7 +7,7 @@ For this project I used HTML, CSS, Javascript, Jquery and AJAX for my front end 
 # Final Product
 !["This is the view of the homepage of the site when you open it. Tweets flow down on the right side in this view"](https://github.com/aidanantony/tweeter/blob/master/snapshot-doc/Home-page.png)
 
-!["This is the same homepage view, but now shows what happens when a user attempts to tweet an empty tweet."] (https://github.com/aidanantony/tweeter/blob/master/snapshot-doc/Error-message.png)
+!["This is the view of the homepage of the site again, but this time with an error message that appears when a user attempts to tweet an empty tweet."](https://github.com/aidanantony/tweeter/blob/master/snapshot-doc/Error-message.png)
 
 !["This is the view of the homepage when a smaller screen or minimized window is used."](https://github.com/aidanantony/tweeter/blob/master/snapshot-doc/Smaller-screen-view.png)
 # Key Features of the Tweeter Project
